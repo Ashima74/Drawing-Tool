@@ -1,0 +1,65 @@
+﻿<!--This componenent renders a button within the ribbon drawer-->
+    
+<UserControl x:Class="ProfilerWPF.gui.Controls.Ribbon.HorizontalRibbonButton"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:converters="clr-namespace:ProfilerWPF.gui.Converters"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             mc:Ignorable="d"
+             >
+
+
+    <UserControl.Resources>
+        <converters:ListContainsToVisibilityConverter x:Key="ListNotEmptyConverter"/>
+        <converters:ObjectExistsToVisibilityConverter x:Key="ObjectExistsConverter"/>
+        <converters:EnabledToButtonOpacityConverter x:Key="EnabledToButtonOpacityConverter"/>
+    </UserControl.Resources>
+
+    <Button Click="MainButton_Click" Width="{Binding Path=Width, RelativeSource={RelativeSource AncestorType=UserControl}}" Name="MainButton" Padding="{Binding Path=ButtonPadding, RelativeSource={RelativeSource AncestorType=UserControl}}" Margin="0,1,0,1" Style="{DynamicResource RibbonButtonStyle}">
+        <Button.ContextMenu>
+            <ContextMenu ItemsSource="{Binding ContextMenuItems}" >
+                <ContextMenu.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Text}"/>
+                    </DataTemplate>
+                </ContextMenu.ItemTemplate>
+            </ContextMenu>
+        </Button.ContextMenu>
+
+		<Grid>
+			<Grid.RowDefinitions>
+				<RowDefinition Height="auto" MinHeight="24"/>
+			</Grid.RowDefinitions>
+			
+			<Grid.ColumnDefinitions>
+				<!-- Icon Column -->
+				<ColumnDefinition Width="auto" MinWidth="0"></ColumnDefinition>
+				<!-- Text Column -->
+				<ColumnDefinition Width="auto" MinWidth="0" ></ColumnDefinition>
+			</Grid.ColumnDefinitions>
+			
+			<!-- Icon -->
+			<Border Margin="0,0,0,0" Padding="{Binding Path=IconPadding, RelativeSource={RelativeSource AncestorType=UserControl}}" Background="Transparent" >
+				<!--<ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>-->
+                <ContentControl Opacity="{Binding IsEnabled, RelativeSource= {RelativeSource AncestorType=UserControl}, Converter= {StaticResource EnabledToButtonOpacityConverter}}" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" VerticalContentAlignment="Center" Style="{Binding Path=IconStyle, RelativeSource={RelativeSource AncestorType=UserControl}}" BorderBrush="Black" Width="{Binding Path=IconWidth, RelativeSource={RelativeSource AncestorType=UserControl}}" Height="{Binding Path=IconHeight, RelativeSource={RelativeSource AncestorType=UserControl}}" />
+            </Border>
+			
+			<!-- Text -->
+            <TextBlock Background="Transparent"  Padding="1,0,0,0" Grid.Row="0" Grid.Column="1" TextAlignment="Center" TextWrapping="WrapWithOverflow" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="Black" FontSize="12">
+			    <!--Conditionally display chevron based on items provided for ItemsList-->
+                    <Run  Text="{Binding Path=Text}">
+                    <Run.Style>
+                        <Style TargetType="Run">
+                            <Style.Triggers>
+                                <DataTrigger Value="False" Binding="{Binding IsEnabled, RelativeSource= {RelativeSource AncestorType=UserControl}}">
+                                    <Setter Property="Foreground" Value="Gray"/>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Run.Style>    
+                </Run>
+            </TextBlock>
+        </Grid>
+    </Button>
+</UserControl>
