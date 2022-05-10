@@ -1,0 +1,144 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <Platforms>AnyCPU;x86</Platforms>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'">
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="bin\**" />
+    <Compile Remove="src\gui\ViewModels\Drawers\BottomBar\**" />
+    <Compile Remove="src\gui\ViewModels\NewFolder1\**" />
+    <EmbeddedResource Remove="bin\**" />
+    <EmbeddedResource Remove="src\gui\ViewModels\Drawers\BottomBar\**" />
+    <EmbeddedResource Remove="src\gui\ViewModels\NewFolder1\**" />
+    <None Remove="bin\**" />
+    <None Remove="src\gui\ViewModels\Drawers\BottomBar\**" />
+    <None Remove="src\gui\ViewModels\NewFolder1\**" />
+    <Page Remove="bin\**" />
+    <Page Remove="src\gui\ViewModels\Drawers\BottomBar\**" />
+    <Page Remove="src\gui\ViewModels\NewFolder1\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="src\gui\Views\Settings\ViewTree.xaml.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="src\gui\Views\RS.ico" />
+    <None Remove="src\gui\Views\RS.png" />
+    <None Remove="src\gui\Views\Settings\RS.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Remove="src\gui\Views\Settings\ViewTree.xaml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Dapper" Version="2.0.90" />
+    <PackageReference Include="Microsoft.Data.Sqlite" Version="5.0.9" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.9" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.9">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Proxies" Version="5.0.9" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="5.0.9" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="5.0.9" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.9">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="netDxf.netstandard" Version="2.4.0" />
+    <PackageReference Include="OpenTK.GLWpfControl" Version="4.1.0" />
+    <PackageReference Include="Prism.Core" Version="8.1.97" />
+    <PackageReference Include="Prism.Unity" Version="8.1.97" />
+    <PackageReference Include="Prism.Wpf" Version="8.1.97" />
+    <PackageReference Include="PrivateObjectExtensions" Version="1.4.0" />
+    <PackageReference Include="SixLabors.ImageSharp" Version="1.0.3" />
+    <PackageReference Include="System.Data.SQLite.Core" Version="1.0.114.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ProfilerCLR\ProfilerCLR.vcxproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="src\data\Configuration\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="src\gui\Views\Drawers\FileMenuViews\ViewC.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="src\gui\Views\Drawers\FileMenuViews\ViewB.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="src\gui\Views\Sidebar\Menus\GroupDataContent - Copy.xaml.cs">
+      <SubType>Code</SubType>
+      <DependentUpon>GroupDataContent.xaml.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="src\gui\Controls\Ribbon\FileMenu\SideMenuButton.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
+    <Resource Include="src\gui\Views\RS.ico" />
+    <Resource Include="src\gui\Views\RS.png" />
+    <Resource Include="src\gui\Views\Settings\RS.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="src\gui\Views\Drawers\FileMenu\DefaultFileContent.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="src\gui\Views\Drawers\FileMenu\ImportFileContent.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <None Update="DRM.rsq">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="NormalFile.rsq">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="src\gui\Controls\Ribbon\FileMenu\MainMenuButton.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+    </Page>
+    <Page Update="src\gui\Views\Drawers\FileMenu\DefaultFileContent.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="src\gui\Views\Drawers\FileMenu\ImportFileContent.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="xcopy /Y  &quot;$(SolutionDir)ProfilerWPF\src\rendering\models&quot; &quot;$(TargetDir)assets\models\&quot; /D /s /r&#xD;&#xA;xcopy /Y  &quot;$(SolutionDir)ProfilerWPF\src\rendering\Shaders&quot; &quot;$(TargetDir)assets\Shaders\&quot; /D /s /r&#xD;&#xA;xcopy /Y  &quot;$(SolutionDir)ProfilerWPF\src\rendering\pngFonts&quot; &quot;$(TargetDir)assets\pngFonts\&quot; /D /s /r" />
+  </Target>
+
+</Project>

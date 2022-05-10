@@ -1,0 +1,41 @@
+﻿<prism:PrismApplication 
+    x:Class="ProfilerWPF.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:prism = "http://prismlibrary.com/">
+	
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+				
+                <!--Custom Styles-->
+                <ResourceDictionary Source="src/gui/Styles/ButtonStyles/RibbonButtonStyle.xaml"/>
+                <ResourceDictionary Source="src/gui/Styles/ButtonStyles/HorizontalExpandButtonStyle.xaml"/>
+                <ResourceDictionary Source="src/gui/Styles/ButtonStyles/VerticalExpandButtonStyle.xaml"/>
+                <ResourceDictionary Source="src/gui/Styles/TabControlStyle.xaml"/>
+                <ResourceDictionary Source="src/gui/Styles/RibbonContextMenuStyle.xaml"/>
+                <ResourceDictionary Source="src/gui/Styles/RibbonContextMenuItemStyle.xaml"/>
+                <ResourceDictionary Source="src/gui/Styles/ButtonStyles/RibbonButtonNoStyle.xaml"/>
+				<ResourceDictionary Source="src/gui/Styles/BottomBarStyles.xaml"/>
+				<ResourceDictionary Source="src/gui/Styles/SideMenuStyles.xaml"/>
+                <ResourceDictionary Source="src/gui/Constants/Regions.xaml"/>
+
+
+
+                <!--XAML Vector Graphics-->
+                <ResourceDictionary Source="src/gui/Assets/VectorGraphics/FileTabIcons.xaml"/>
+                <ResourceDictionary Source="src/gui/Assets/VectorGraphics/DrawTabIcons.xaml"/>
+                <ResourceDictionary Source="src/gui/Assets/VectorGraphics/SideMenuIcons.xaml"/>
+                <ResourceDictionary Source="src/gui/Assets/VectorGraphics/ProcessMenuIcons.xaml"/>
+                <ResourceDictionary Source="src/gui/Assets/VectorGraphics/SetUpMenuIcons.xaml"/>
+                <ResourceDictionary Source="src/gui/Assets/VectorGraphics/LayoutMenuIcons.xaml"/>
+                <ResourceDictionary Source="src/gui/Assets/VectorGraphics/RunMenuIcons.xaml"/>
+                <ResourceDictionary Source="src/gui/Assets/VectorGraphics/SideMenuIcons.xaml"/>
+
+            </ResourceDictionary.MergedDictionaries>
+
+            <!--Color Constants-->
+            <SolidColorBrush Color="SlateGray" x:Key="ThemeBorderColor" />
+        </ResourceDictionary>
+    </Application.Resources>
+</prism:PrismApplication>
