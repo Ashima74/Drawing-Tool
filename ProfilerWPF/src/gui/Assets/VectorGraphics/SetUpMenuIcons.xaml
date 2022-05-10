@@ -1,0 +1,194 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Style TargetType="ContentControl" x:Key="Tools">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="ContentControl">
+                    <Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" Stretch="Uniform">
+                        <Canvas Name="svg13" Width="11" Height="11">
+                            <Canvas.RenderTransform>
+                                <TranslateTransform X="0" Y="0"/>
+                            </Canvas.RenderTransform>
+                            <Canvas.Resources>
+                                <RectangleGeometry xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" x:Key="clip0" Rect="0, 0, 11, 11"/>
+                            </Canvas.Resources>
+                            <!--Unknown tag: sodipodi:namedview-->
+                            <Canvas Name="g6">
+                                <Path xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Name="path2" Fill="#FFF6F6F6">
+                                    <Path.Data>
+                                        <PathGeometry Figures="M11.0002 3.78124C11.0042 4.32575 10.8897 4.86462 10.6646 5.36045C10.4395 5.85628 10.1093 6.2972 9.69676 6.65263C9.28423 7.00806 8.79931 7.26948 8.27564 7.41876C7.75197 7.56804 7.2021 7.6016 6.66416 7.51711L6.61054 7.50886C6.4216 7.47941 6.2352 7.43551 6.05298 7.37755L2.93448 10.4967C2.61211 10.8191 2.17488 11.0002 1.71898 11.0002C1.26308 11.0002 0.825847 10.8191 0.503477 10.4967C0.181106 10.1744 0 9.73714 0 9.28124C0 8.82534 0.181106 8.38811 0.503477 8.06574L3.62266 4.94999C3.5647 4.76753 3.5208 4.5809 3.49135 4.39174C3.49135 4.37455 3.48585 4.35668 3.4831 4.3388C3.40251 3.82275 3.4297 3.29559 3.56296 2.79057C3.69623 2.28555 3.93268 1.81362 4.2574 1.40452C4.58212 0.995418 4.98807 0.658029 5.44967 0.413621C5.91127 0.169212 6.41849 0.0230842 6.93937 -0.0155505C7.46025 -0.0541852 7.98348 0.0155111 8.47608 0.189145C8.96869 0.362778 9.41998 0.636583 9.8015 0.993298C10.183 1.35001 10.4865 1.7819 10.6928 2.26174C10.8991 2.74157 11.0038 3.25894 11.0002 3.78124Z" FillRule="NonZero"/>
+                                    </Path.Data>
+                                </Path>
+                                <Path xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Name="path4" Fill="#FF424242">
+                                    <Path.Data>
+                                        <PathGeometry Figures="M10.3135 3.78124C10.3165 4.30407 10.1862 4.81903 9.9349 5.2775C9.68358 5.73597 9.31954 6.12281 8.87717 6.40149C8.43479 6.68016 7.92868 6.84148 7.40664 6.8702C6.88459 6.89892 6.36385 6.79409 5.89357 6.56562L2.4492 10.01C2.25479 10.1979 1.99434 10.302 1.72395 10.2998C1.45356 10.2976 1.19486 10.1892 1.00356 9.99812C0.812269 9.807 0.703691 9.5484 0.701215 9.27801C0.698739 9.00762 0.802562 8.74708 0.990323 8.55249L4.43539 5.10743C4.15601 4.53217 4.06289 3.88414 4.16897 3.25349C4.27505 2.62285 4.57506 2.04094 5.02726 1.58874C5.47946 1.13654 6.06136 0.836531 6.69201 0.730451C7.32266 0.62437 7.97069 0.717495 8.54595 0.996869L6.62576 2.91706L8.08395 4.37524L10.0041 2.45506C10.2053 2.86836 10.311 3.32159 10.3135 3.78124Z" FillRule="NonZero"/>
+                                    </Path.Data>
+                                </Path>
+                            </Canvas>
+                        </Canvas>
+                    </Viewbox>
+
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="ContentControl" x:Key="MasterGroups">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="ContentControl">
+                    <Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" Stretch="Uniform">
+                        <Canvas Name="svg8" Width="15" Height="15">
+                            <Canvas.RenderTransform>
+                                <TranslateTransform X="0" Y="0"/>
+                            </Canvas.RenderTransform>
+                            <Canvas.Resources/>
+                            <!--Unknown tag: sodipodi:namedview-->
+                            <Rectangle xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Canvas.Left="0.5" Canvas.Top="0.5" Width="10" Height="10" Name="rect2" Fill="#FFE33D3D" Stroke="#000000"/>
+                            <Rectangle xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Canvas.Left="2.5" Canvas.Top="2.5" Width="10" Height="10" Name="rect4" Fill="#FF0AA91A" Stroke="#000000"/>
+                            <Path xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Name="path6" Fill="#FF0E9FF1" Stroke="#000000">
+                                <Path.Data>
+                                    <PathGeometry Figures="M14.5 4.5H4.5V14.5H14.5V4.5Z" FillRule="NonZero"/>
+                                </Path.Data>
+                            </Path>
+                        </Canvas>
+                    </Viewbox>
+
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="ContentControl" x:Key="SaveMachineConfig">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="ContentControl">
+                    <!--This file is NOT compatible with Silverlight-->
+                    <Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" Stretch="Uniform">
+                        <Canvas Name="svg4" Width="10" Height="10">
+                            <Canvas.RenderTransform>
+                                <TranslateTransform X="0" Y="0"/>
+                            </Canvas.RenderTransform>
+                            <Canvas.Resources/>
+                            <!--Unknown tag: sodipodi:namedview-->
+                            <Path xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Name="path2" Fill="#000000">
+                                <Path.Data>
+                                    <PathGeometry Figures="M3.57143 7.85714H5V10H3.57143V7.85714ZM10 0.714286V10H7.85714V6.42857H2.14286V10H1.42857L0 8.57143V0.714286C0 0.524845 0.0752549 0.343164 0.209209 0.209209C0.343164 0.0752549 0.524845 0 0.714286 0H9.28571C9.47515 0 9.65684 0.0752549 9.79079 0.209209C9.92475 0.343164 10 0.524845 10 0.714286ZM8.57143 1.42857H1.42857V4.28571H8.57143V1.42857Z" FillRule="NonZero"/>
+                                </Path.Data>
+                            </Path>
+                        </Canvas>
+                    </Viewbox>
+
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="ContentControl" x:Key="SupervisorMode">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="ContentControl">
+                    <Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" Stretch="Uniform">
+                        <Canvas Name="svg17" Width="25" Height="26">
+                            <Canvas.RenderTransform>
+                                <TranslateTransform X="0" Y="0"/>
+                            </Canvas.RenderTransform>
+                            <Canvas.Resources>
+                                <RectangleGeometry xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" x:Key="clip0" Rect="0, 0, 25, 26"/>
+                            </Canvas.Resources>
+                            <!--Unknown tag: sodipodi:namedview-->
+                            <Canvas Name="g10" Clip="{StaticResource clip0}">
+                                <Path xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Name="path2" Fill="#FF424242">
+                                    <Path.Data>
+                                        <PathGeometry Figures="M20.5732 18.145C20.0164 17.5065 19.3454 17.1947 18.4887 17.1947H16.6836L15.4986 16.0069C14.6277 16.7493 13.5711 17.1799 12.4289 17.1799C11.3581 17.1799 10.3444 16.7938 9.51626 16.1257L8.45968 17.1799H6.5811C5.62451 17.1799 4.88208 17.5214 4.2967 18.2194C2.59767 20.2684 2.88322 24.6488 3.01172 26H22.0294C22.1295 24.6339 22.3008 20.1496 20.5732 18.145Z" FillRule="NonZero"/>
+                                    </Path.Data>
+                                </Path>
+                                <Path xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Name="path4" Fill="#FF424242">
+                                    <Path.Data>
+                                        <PathGeometry Figures="M7.47931 8.84979C7.13664 9.14677 6.9082 9.62192 6.9082 10.1713C6.9082 10.988 7.4222 11.6562 8.07896 11.775C8.22174 13.0074 8.70718 14.0914 9.43533 14.8932C9.59234 15.0565 9.74939 15.2199 9.92072 15.3535C10.1349 15.5317 10.3633 15.6802 10.606 15.8138C11.1486 16.1107 11.7482 16.2741 12.3907 16.2741C13.0332 16.2741 13.6329 16.1107 14.1754 15.8138C14.4181 15.6802 14.6466 15.5317 14.8608 15.3535C15.0321 15.2199 15.1891 15.0565 15.3462 14.8932C16.0601 14.0914 16.5598 13.0223 16.6883 11.7898C16.7026 11.7898 16.7168 11.7898 16.7311 11.7898C17.4879 11.7898 18.0875 11.0622 18.0875 10.1713C18.0875 9.62192 17.859 9.14677 17.5164 8.84979H7.47931Z" FillRule="NonZero"/>
+                                    </Path.Data>
+                                </Path>
+                                <Path xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Name="path6" Fill="#FF424242">
+                                    <Path.Data>
+                                        <PathGeometry Figures="M17.6085 5.73154C17.1659 4.20214 15.9951 2.64303 14.5103 1.8412V5.33063V5.80579C14.5103 5.83549 14.5103 5.85033 14.5103 5.86518C14.496 6.02852 14.4674 6.177 14.3961 6.32549C14.2104 6.69671 13.8392 6.96398 13.4109 6.96398H13.1825H11.612C11.2122 6.96398 10.8552 6.74125 10.6697 6.41458C10.584 6.28094 10.5412 6.13251 10.5126 5.96912C10.4983 5.90973 10.4983 5.86518 10.4983 5.80579V5.39003V1.82635C9.01346 2.64303 7.8427 4.20214 7.40009 5.73154L7.30015 6.05821H6.48633V7.91429H7.38581H8.64224H9.17051H16.0523H16.5663H18.512V7.8252V6.05821H17.7085L17.6085 5.73154Z" FillRule="NonZero"/>
+                                    </Path.Data>
+                                </Path>
+                                <Path xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Name="path8" Fill="#FF424242">
+                                    <Path.Data>
+                                        <PathGeometry Figures="M11.6066 6.5037H13.3913C13.6483 6.5037 13.8625 6.35521 13.9767 6.13248C14.0338 6.02854 14.0623 5.9246 14.0623 5.80581V5.67218V5.12278V1.6185V1.11365V0.920615C14.0623 0.801826 14.0338 0.697886 14.0052 0.593945C13.8768 0.252427 13.5484 0 13.1772 0H11.6066C11.2639 0 10.9784 0.267275 10.9498 0.608794C10.9498 0.638491 10.9355 0.668188 10.9355 0.697886V1.11365V1.6185V5.18217V5.74642V5.80581C10.9355 5.9543 10.9784 6.08794 11.0498 6.20673C11.1783 6.38491 11.3782 6.5037 11.6066 6.5037Z" FillRule="NonZero"/>
+                                    </Path.Data>
+                                </Path>
+                            </Canvas>
+                        </Canvas>
+                    </Viewbox>
+
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="ContentControl" x:Key="FindSurface">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="ContentControl">
+                    <Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" Stretch="Uniform">
+                        <Canvas Name="svg10" Width="11" Height="11">
+                            <Canvas.RenderTransform>
+                                <TranslateTransform X="0" Y="0"/>
+                            </Canvas.RenderTransform>
+                            <Canvas.Resources/>
+                            <!--Unknown tag: sodipodi:namedview-->
+                            <Line xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Y1="10.5" X2="11" Y2="10.5" Name="line2" Stroke="#000000"/>
+                            <Line xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" X1="5.5" X2="5.5" Y2="11" Name="line4" Stroke="#000000"/>
+                            <Path xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Name="path6" Stroke="#000000">
+                                <Path.Data>
+                                    <PathGeometry Figures="M3.24414 5.56409L5.37637 9.67075" FillRule="NonZero"/>
+                                </Path.Data>
+                            </Path>
+                            <Path xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Name="path8" Stroke="#000000">
+                                <Path.Data>
+                                    <PathGeometry Figures="M5.62467 9.67079L7.77863 5.53875" FillRule="NonZero"/>
+                                </Path.Data>
+                            </Path>
+                        </Canvas>
+                    </Viewbox>
+
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="ContentControl" x:Key="LoadMachineConfig">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="ContentControl">
+                    <Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" Stretch="Uniform">
+                        <Canvas Name="svg13" Width="16" Height="16">
+                            <Canvas.RenderTransform>
+                                <TranslateTransform X="0" Y="0"/>
+                            </Canvas.RenderTransform>
+                            <Canvas.Resources>
+                                <RectangleGeometry xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" x:Key="clip0" Rect="0, 0, 16, 16"/>
+                            </Canvas.Resources>
+                            <!--Unknown tag: sodipodi:namedview-->
+                            <Canvas Name="g6" Clip="{StaticResource clip0}">
+                                <Path xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Name="path2" Fill="#FFF6F6F6">
+                                    <Path.Data>
+                                        <PathGeometry Figures="M-0.000934245 2.96901V11.969C-0.00842723 12.2338 0.0382684 12.4973 0.136287 12.7434C0.234305 12.9894 0.381577 13.2129 0.569066 13.4C0.970345 13.7415 1.47286 13.9415 1.99907 13.969H13.6761L15.9991 8.16501V6.96501H14.9991V4.96501C15.0047 4.70083 14.9567 4.43826 14.8582 4.19308C14.7597 3.9479 14.6126 3.72519 14.4257 3.53835C14.2389 3.35151 14.0162 3.20439 13.771 3.10586C13.5258 3.00733 13.2632 2.95942 12.9991 2.96501H10.1151L9.11507 0.965008H1.99907C1.7339 0.956946 1.46989 1.0033 1.22333 1.10121C0.976764 1.19912 0.752876 1.34651 0.565474 1.53428C0.378073 1.72206 0.231132 1.94624 0.133715 2.193C0.0362991 2.43976 -0.00952643 2.70386 -0.000934245 2.96901Z" FillRule="NonZero"/>
+                                    </Path.Data>
+                                </Path>
+                                <Path xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Name="path4" Fill="#FFDCB67A">
+                                    <Path.Data>
+                                        <PathGeometry Figures="M1.00038 2.99999V12C0.996677 12.1316 1.02014 12.2625 1.06929 12.3846C1.11845 12.5068 1.19224 12.6174 1.28608 12.7098C1.37991 12.8021 1.49177 12.8741 1.61466 12.9213C1.73756 12.9685 1.86886 12.9898 2.00038 12.984V2.99999H8.00038L9.00038 4.99999H13.0004V7.99999H4.00038L2.00038 13H13.0004L15.0004 7.99999H14.0004V4.99999C14.0004 3.99999 12.7644 3.99999 13.0004 3.99999H9.50038L8.50038 1.99999H2.00038C1.86827 1.99712 1.73695 2.02103 1.61433 2.07027C1.49171 2.11951 1.38033 2.19306 1.28689 2.2865C1.19346 2.37993 1.1199 2.49132 1.07066 2.61394C1.02142 2.73656 0.997513 2.86788 1.00038 2.99999Z" FillRule="NonZero"/>
+                                    </Path.Data>
+                                </Path>
+                            </Canvas>
+                        </Canvas>
+                    </Viewbox>
+
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

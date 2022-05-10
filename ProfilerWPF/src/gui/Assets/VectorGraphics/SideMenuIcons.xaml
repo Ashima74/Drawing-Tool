@@ -1,0 +1,311 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+	
+		<SolidColorBrush x:Key="Button.Static.Background" Opacity="0"/>
+		<SolidColorBrush x:Key="Button.Static.Border" Opacity="0"/>
+		<SolidColorBrush x:Key="Button.MouseOver.Background" Color="#D5D5D5"/>
+		<SolidColorBrush x:Key="Button.MouseOver.Border" Opacity="0"/>
+		<SolidColorBrush x:Key="Button.Pressed.Background" Color="#FF707070"/>
+		<SolidColorBrush x:Key="Button.Pressed.Border" Opacity="0"/>
+		<SolidColorBrush x:Key="Button.Disabled.Background" Color="#FFF4F4F4"/>
+		<SolidColorBrush x:Key="Button.Disabled.Border" Color="#FFADB2B5"/>
+		<SolidColorBrush x:Key="Button.Disabled.Foreground" Opacity="0"/>
+
+	<!--Cross Icon-->
+	<Style TargetType="ContentControl" x:Key="Cross">
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="ContentControl">
+
+					<Border CornerRadius="2" Padding="4" Background="White" BorderBrush="Black" BorderThickness="2">
+						<Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" Stretch="Uniform">
+							<Canvas Name="svg23" Width="7" Height="7">
+								<Canvas.RenderTransform>
+									<TranslateTransform X="0" Y="0"/>
+								</Canvas.RenderTransform>
+								<Canvas.Resources/>
+
+								<Line xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" X1="3.5" X2="3.5" Y2="7" Name="line19" Stroke="#000000"/>
+								<Line xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Y1="3.5" X2="7" Y2="3.5" Name="line21" Stroke="#000000"/>
+							</Canvas>
+						</Viewbox>
+					</Border>
+
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+
+		<!-- Triggers -->
+		<Style.Triggers>
+			<Trigger Property="IsMouseOver" Value="True">
+				<Setter Property="Background" Value="{StaticResource Button.MouseOver.Background}"/>
+				<Setter Property="Opacity" Value="0.5"/>
+			</Trigger>
+		</Style.Triggers>
+	</Style>
+
+	<!-- UnopenedTab Icon-->
+	<Style TargetType="ContentControl" x:Key="UnopenedTab">
+		<Style.Triggers>
+			<Trigger Property="IsMouseOver" Value="True">
+				<Setter Property="Background" Value="{StaticResource Button.MouseOver.Background}"/>
+				<Setter Property="Opacity" Value="0.5"/>
+			</Trigger>
+		</Style.Triggers>
+
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="ContentControl">
+					<Border Background="White">
+						<Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" Stretch="Uniform">
+							<Canvas Name="svg23" Width="9" Height="9">
+								<Canvas.RenderTransform>
+									<TranslateTransform X="0" Y="0"/>
+								</Canvas.RenderTransform>
+								<Canvas.Resources/>
+								<!--Unknown tag: sodipodi:namedview-->
+								<Line xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Y1="4.5" X2="9" Y2="4.5" Name="line19" Stroke="#000000"/>
+								<Line xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" X1="4.5" Y1="9" X2="4.5" Name="line21" Stroke="#000000"/>
+							</Canvas>
+						</Viewbox>
+					</Border>
+
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+
+	<!-- OpenedTab Icon-->
+	<Style TargetType="ContentControl" x:Key="OpenedTab">
+		<Style.Triggers>
+			<Trigger Property="IsMouseOver" Value="True">
+				<Setter Property="Background" Value="{StaticResource Button.MouseOver.Background}"/>
+				<Setter Property="Opacity" Value="0.5"/>
+			</Trigger>
+		</Style.Triggers>
+
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="ContentControl">
+					<Border Background="White">
+						<Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" Stretch="Uniform">
+							<Canvas Name="svg124" Width="9" Height="1">
+								<Canvas.RenderTransform>
+									<TranslateTransform X="0" Y="0"/>
+								</Canvas.RenderTransform>
+								<Canvas.Resources/>
+								<!--Unknown tag: sodipodi:namedview-->
+								<Path xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Name="path122" Stroke="#000000">
+									<Path.Data>
+										<PathGeometry Figures="M0 0.5H9" FillRule="NonZero"/>
+									</Path.Data>
+								</Path>
+							</Canvas>
+						</Viewbox>
+					</Border>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+
+	<!--ExpandedChevrons Icon-->
+	<Style TargetType="ContentControl" x:Key="ChevronsRight">
+		<Style.Triggers>
+			<Trigger Property="IsMouseOver" Value="True">
+				<Setter Property="Background" Value="{StaticResource Button.MouseOver.Background}"/>
+				<Setter Property="Opacity" Value="0.5"/>
+			</Trigger>
+		</Style.Triggers>
+	
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="ContentControl">
+					<Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" Stretch="Uniform">
+						<Canvas Name="svg38" Width="15" Height="9" Background="Transparent">
+							<Canvas.RenderTransform>
+								<TranslateTransform X="0" Y="0"/>
+							</Canvas.RenderTransform>
+							<Canvas.Resources/>
+							<!--Unknown tag: sodipodi:namedview-->
+							<Path xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Name="path32" Fill="#000000">
+								<Path.Data>
+									<PathGeometry Figures="M5.15392 7.17712L6.03517 8.05418L9.78516 4.32207L6.03517 0.589923L5.15392 1.46697L8.01641 4.32206L5.15392 7.17712Z" FillRule="NonZero"/>
+								</Path.Data>
+							</Path>
+							<Path xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Name="path34" Fill="#000000">
+								<Path.Data>
+									<PathGeometry Figures="M0.153922 7.17749L1.03517 8.05454L4.78516 4.32244L1.03517 0.590289L0.153922 1.46733L3.01641 4.32243L0.153922 7.17749Z" FillRule="NonZero"/>
+								</Path.Data>
+							</Path>
+							<Path xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Name="path36" Fill="#000000">
+								<Path.Data>
+									<PathGeometry Figures="M9.78518 6.98678L10.7366 7.80538L14.7851 4.32206L10.7366 0.83866L9.78516 1.65724L12.8756 4.32204L9.78518 6.98678Z" FillRule="NonZero"/>
+								</Path.Data>
+							</Path>
+						</Canvas>
+					</Viewbox>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+
+	<!--UnexpandedChevrons Icon-->
+	<Style TargetType="ContentControl" x:Key="ChevronsLeft">
+		
+		<Style.Triggers>
+			<Trigger Property="IsMouseOver" Value="True">
+				<Setter Property="Background" Value="{StaticResource Button.MouseOver.Background}"/>
+				<Setter Property="Opacity" Value="0.5"/>
+			</Trigger>
+		</Style.Triggers>
+
+		<Setter Property="Background" Value="Transparent"></Setter>
+		
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="ContentControl">
+
+					<Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" Stretch="Uniform" >
+						<Canvas Name="svg8" Width="16" Height="9" Background="Transparent">
+							<Canvas.RenderTransform>
+								<TranslateTransform X="0" Y="0"/>
+							</Canvas.RenderTransform>
+							<Canvas.Resources/>
+							<!--Unknown tag: sodipodi:namedview-->
+							<Path xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Name="path2" Fill="#000000">
+								<Path.Data>
+									<PathGeometry Figures="M15.0349 1.42604L14.1566 0.546021L10.4193 4.2908L14.1566 8.03558L15.0349 7.15556L12.1821 4.2908L15.0349 1.42604Z" FillRule="NonZero"/>
+								</Path.Data>
+							</Path>
+							<Path xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Name="path4" Fill="#000000">
+								<Path.Data>
+									<PathGeometry Figures="M10.0518 1.42604L9.17357 0.546021L5.43626 4.2908L9.17357 8.03558L10.0518 7.15556L7.19902 4.2908L10.0518 1.42604Z" FillRule="NonZero"/>
+								</Path.Data>
+							</Path>
+							<Path xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Name="path6" Fill="#000000">
+								<Path.Data>
+									<PathGeometry Figures="M5.43621 1.61727L4.48801 0.795898L0.453125 4.29108L4.48801 7.78625L5.43621 6.96489L2.35625 4.29108L5.43621 1.61727Z" FillRule="NonZero"/>
+								</Path.Data>
+							</Path>
+						</Canvas>
+					</Viewbox>
+
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+
+	<!--Groups Icon-->
+	<Style TargetType="ContentControl" x:Key="Groups">
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="ContentControl">
+
+					<Viewbox xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" Stretch="Uniform">
+						<Canvas Name="svg191" Width="20" Height="13">
+							<Canvas.RenderTransform>
+								<TranslateTransform X="0" Y="0"/>
+							</Canvas.RenderTransform>
+							<Canvas.Resources/>
+							<!--Unknown tag: sodipodi:namedview-->
+							<Rectangle xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Canvas.Left="-0.052916" Canvas.Top="0.715044" Width="7.40742" Height="7.37222" Name="rect155" Fill="#ffffff">
+								<Rectangle.RenderTransform>
+									<MatrixTransform Matrix="0.642256 0.76649 -0.748089 0.663599 6.81384 1.24729"/>
+								</Rectangle.RenderTransform>
+							</Rectangle>
+							<Rectangle xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Canvas.Left="-0.052916" Canvas.Top="0.715044" Width="7.40742" Height="7.37222" Name="rect157" Fill="#ffffff">
+								<Rectangle.RenderTransform>
+									<MatrixTransform Matrix="0.642256 0.76649 -0.748089 0.663599 6.81384 1.24729"/>
+								</Rectangle.RenderTransform>
+							</Rectangle>
+							<Rectangle xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Canvas.Left="-0.052916" Canvas.Top="0.715044" Width="7.40742" Height="7.37222" Name="rect159" Fill="#ffffff">
+								<Rectangle.RenderTransform>
+									<MatrixTransform Matrix="0.642256 0.76649 -0.748089 0.663599 6.81384 1.24729"/>
+								</Rectangle.RenderTransform>
+							</Rectangle>
+							<Rectangle xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Canvas.Left="-0.052916" Canvas.Top="0.715044" Width="7.40742" Height="7.37222" Name="rect161" Fill="#ffffff">
+								<Rectangle.RenderTransform>
+									<MatrixTransform Matrix="0.642256 0.76649 -0.748089 0.663599 6.81384 1.24729"/>
+								</Rectangle.RenderTransform>
+							</Rectangle>
+							<Rectangle xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Canvas.Left="-0.052916" Canvas.Top="0.715044" Width="7.40742" Height="7.37222" Name="rect163" Fill="#ffffff">
+								<Rectangle.RenderTransform>
+									<MatrixTransform Matrix="0.642256 0.76649 -0.748089 0.663599 6.81384 1.24729"/>
+								</Rectangle.RenderTransform>
+							</Rectangle>
+							<Rectangle xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Canvas.Left="-0.052916" Canvas.Top="0.715044" Width="7.40742" Height="7.37222" Name="rect165" Stroke="#000000">
+								<Rectangle.RenderTransform>
+									<MatrixTransform Matrix="0.642256 0.76649 -0.748089 0.663599 6.81384 1.24729"/>
+								</Rectangle.RenderTransform>
+							</Rectangle>
+							<Rectangle xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Canvas.Left="-0.052916" Canvas.Top="0.715044" Width="7.40742" Height="7.37222" Name="rect167" Fill="#ffffff">
+								<Rectangle.RenderTransform>
+									<MatrixTransform Matrix="0.642256 0.76649 -0.748088 0.663599 11.0961 1.24729"/>
+								</Rectangle.RenderTransform>
+							</Rectangle>
+							<Rectangle xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Canvas.Left="-0.052916" Canvas.Top="0.715044" Width="7.40742" Height="7.37222" Name="rect169" Fill="#ffffff">
+								<Rectangle.RenderTransform>
+									<MatrixTransform Matrix="0.642256 0.76649 -0.748088 0.663599 11.0961 1.24729"/>
+								</Rectangle.RenderTransform>
+							</Rectangle>
+							<Rectangle xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Canvas.Left="-0.052916" Canvas.Top="0.715044" Width="7.40742" Height="7.37222" Name="rect171" Fill="#ffffff">
+								<Rectangle.RenderTransform>
+									<MatrixTransform Matrix="0.642256 0.76649 -0.748088 0.663599 11.0961 1.24729"/>
+								</Rectangle.RenderTransform>
+							</Rectangle>
+							<Rectangle xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Canvas.Left="-0.052916" Canvas.Top="0.715044" Width="7.40742" Height="7.37222" Name="rect173" Fill="#ffffff">
+								<Rectangle.RenderTransform>
+									<MatrixTransform Matrix="0.642256 0.76649 -0.748088 0.663599 11.0961 1.24729"/>
+								</Rectangle.RenderTransform>
+							</Rectangle>
+							<Rectangle xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Canvas.Left="-0.052916" Canvas.Top="0.715044" Width="7.40742" Height="7.37222" Name="rect175" Fill="#ffffff">
+								<Rectangle.RenderTransform>
+									<MatrixTransform Matrix="0.642256 0.76649 -0.748088 0.663599 11.0961 1.24729"/>
+								</Rectangle.RenderTransform>
+							</Rectangle>
+							<Rectangle xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Canvas.Left="-0.052916" Canvas.Top="0.715044" Width="7.40742" Height="7.37222" Name="rect177" Stroke="#000000">
+								<Rectangle.RenderTransform>
+									<MatrixTransform Matrix="0.642256 0.76649 -0.748088 0.663599 11.0961 1.24729"/>
+								</Rectangle.RenderTransform>
+							</Rectangle>
+							<Rectangle xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Canvas.Left="-0.052916" Canvas.Top="0.715044" Width="7.40742" Height="7.37222" Name="rect179" Fill="#ffffff">
+								<Rectangle.RenderTransform>
+									<MatrixTransform Matrix="0.642256 0.76649 -0.748089 0.663599 15.0834 1.24729"/>
+								</Rectangle.RenderTransform>
+							</Rectangle>
+							<Rectangle xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Canvas.Left="-0.052916" Canvas.Top="0.715044" Width="7.40742" Height="7.37222" Name="rect181" Fill="#ffffff">
+								<Rectangle.RenderTransform>
+									<MatrixTransform Matrix="0.642256 0.76649 -0.748089 0.663599 15.0834 1.24729"/>
+								</Rectangle.RenderTransform>
+							</Rectangle>
+							<Rectangle xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Canvas.Left="-0.052916" Canvas.Top="0.715044" Width="7.40742" Height="7.37222" Name="rect183" Fill="#ffffff">
+								<Rectangle.RenderTransform>
+									<MatrixTransform Matrix="0.642256 0.76649 -0.748089 0.663599 15.0834 1.24729"/>
+								</Rectangle.RenderTransform>
+							</Rectangle>
+							<Rectangle xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Canvas.Left="-0.052916" Canvas.Top="0.715044" Width="7.40742" Height="7.37222" Name="rect185" Fill="#ffffff">
+								<Rectangle.RenderTransform>
+									<MatrixTransform Matrix="0.642256 0.76649 -0.748089 0.663599 15.0834 1.24729"/>
+								</Rectangle.RenderTransform>
+							</Rectangle>
+							<Rectangle xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Canvas.Left="-0.052916" Canvas.Top="0.715044" Width="7.40742" Height="7.37222" Name="rect187" Fill="#ffffff">
+								<Rectangle.RenderTransform>
+									<MatrixTransform Matrix="0.642256 0.76649 -0.748089 0.663599 15.0834 1.24729"/>
+								</Rectangle.RenderTransform>
+							</Rectangle>
+							<Rectangle xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Canvas.Left="-0.052916" Canvas.Top="0.715044" Width="7.40742" Height="7.37222" Name="rect189" Stroke="#000000">
+								<Rectangle.RenderTransform>
+									<MatrixTransform Matrix="0.642256 0.76649 -0.748089 0.663599 15.0834 1.24729"/>
+								</Rectangle.RenderTransform>
+							</Rectangle>
+						</Canvas>
+					</Viewbox>
+
+
+
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+
+</ResourceDictionary>
